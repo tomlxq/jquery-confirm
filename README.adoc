@@ -42,6 +42,7 @@ $(document).ready(function() {
         });
     });
 ----
+
 [[common-confirm]]
 .common confirm
 image::https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/confirm.jpg[single image, 500 , link="https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/confirm.jpg"]
