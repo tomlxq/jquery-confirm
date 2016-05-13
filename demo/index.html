@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jquery tooltip 插件</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet">
+    <link href="http://apps.bdimg.com/libs/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+    <link href="../tConfirm.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <h1>Jquery confirm 插件使用</h1>
+    <p>Author: tomLuo</p>
+    <p>Email: 21429503@qq.com</p>
+    <p>This is a demonstration.</p>
+
+    <h3>Confirm box</h3>
+    <p>
+      <input value="delete" id="delete_without_layer" type="button">
+    </p>
+    <h3>Confirm box with over layer</h3>
+    <p>
+        <input value="delete" id="delete_with_layer" type="button">
+    </p>
+    <h3>Information box </h3>
+    <p>
+        <input value="information" id="information" type="button">
+    </p>
+    <h3>Success box </h3>
+    <p>
+        <input value="success" id="success" type="button">
+    </p>
+    <h3>Error box </h3>
+    <p>
+        <input value="error" id="error" type="button">
+    </p>
+    <h3>Warning box </h3>
+    <p>
+        <input value="warning" id="warning" type="button">
+    </p>
+
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+<script src="http://apps.bdimg.com/libs/fancybox/2.1.5/jquery.fancybox.js" type="text/javascript"></script>
+<script src="../tConfirm.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#delete_without_layer").click(function () {
+            $.tConfirm.open({body:'Are you sure to delete?',type:'confirm',onOk:function(){
+                alert("yes");
+            }});
+        });
+        $("#delete_with_layer").click(function () {
+            $.tConfirm.open({overlay:true,body:'Are you sure to delete?',type:'confirm',onOk:function(){
+                alert("yes");
+            }});
+        });
+        $("#information").click(function () {
+            $.tConfirm.open({body:'This is confirm box based on fancybox!',type:'info',onOk:function(){
+                alert("yes");
+            }});
+        });
+        $("#success").click(function () {
+            $.tConfirm.open({body:'Save success!',type:'success',onOk:function(){
+                alert("yes");
+            }});
+        });
+        $("#error").click(function () {
+            $.tConfirm.open({body:'Some fields are wrong!',type:'error',onOk:function(){
+                alert("yes");
+            }});
+        });      $("#warning").click(function () {
+            $.tConfirm.open({body:'Someone login, it\'s not real user!',type:'warning',onOk:function(){
+                alert("yes");
+            }});
+        });
+    });
+</script>
+</body>
+</html>

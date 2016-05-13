@@ -1,0 +1,64 @@
+= A simple confirm box plugin
+:image-width: 500
+
+Author: tomLuo
+
+Email: 21429503@qq.com
+
+This is a demonstration. include fancybox css/js, please take care!
+
+Example:
+[source]
+----
+$(document).ready(function() {
+        $("#delete_without_layer").click(function () {
+            $.tConfirm.open({body:'Are you sure to delete?',type:'confirm',onOk:function(){
+                alert("yes");
+            }});
+        });
+        $("#delete_with_layer").click(function () {
+            $.tConfirm.open({overlay:true,body:'Are you sure to delete?',type:'confirm',onOk:function(){
+                alert("yes");
+            }});
+        });
+        $("#information").click(function () {
+            $.tConfirm.open({body:'This is confirm box based on fancybox!',type:'info',onOk:function(){
+                alert("yes");
+            }});
+        });
+        $("#success").click(function () {
+            $.tConfirm.open({body:'Save success!',type:'success',onOk:function(){
+                alert("yes");
+            }});
+        });
+        $("#error").click(function () {
+            $.tConfirm.open({body:'Some fields are wrong!',type:'error',onOk:function(){
+                alert("yes");
+            }});
+        });      $("#warning").click(function () {
+            $.tConfirm.open({body:'Someone login, it\'s not real user!',type:'warning',onOk:function(){
+                alert("yes");
+            }});
+        });
+    });
+----
+[[common-confirm]]
+.common confirm
+image::https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/confirm.jpg[single image, 500 , link="https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/confirm.jpg"]
+
+[[confirm_with_layer]]
+.confirm box with layer
+image::https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/confirm_with_layer.jpg[single image, 500 , link="https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/confirm_with_layer.jpg"]
+
+[[error_box]]
+.error box
+image::https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/error.jpg[single image, 500 , link="https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/error.jpg"]
+
+
+[[success_box]]
+.success box
+image::https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/success.jpg[single image, 500 , link="https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/success.jpg"]
+
+[[warning_box]]
+.warning box
+image::https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/warning.jpg[single image, 500 , link="https://raw.githubusercontent.com/tomlxq/jquery-confirm/master/doc_img/warning.jpg"]
